@@ -151,7 +151,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                 Transform.translate(
                   offset: const Offset(-10, -250),
                   child: Transform.rotate(
-                    angle: 20 * 3.1415926535 / 100,
+                    angle: 20 * 3.1415926535 / 180,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(150),
                       child: Container(
@@ -159,8 +159,12 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                         height: 450,
                         color: Colors.white,
                         child: Transform.rotate(
-                          angle: -20 * 3.1415926535 / 100,
-                          child: Image.asset('/images/${weather.cityName?.toLowerCase()}.jpg', fit: BoxFit.cover),
+                          angle: -20 * 3.1415926535 / 180,
+                          child: Image.asset(
+                            '/images/${weather.cityName?.toLowerCase()}.jpg',
+                            height: 450,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
@@ -168,7 +172,13 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 150.0, top: 100),
-                  child: (design?["image"] != null) ? Image.asset(design?["image"], fit: BoxFit.cover, height: 100) : SizedBox(),
+                  child: (design?["image"] != null)
+                      ? Image.asset(
+                          design?["image"],
+                          fit: BoxFit.cover,
+                          height: 100,
+                        )
+                      : SizedBox(),
                 ),
                 Padding(
                   padding: EdgeInsetsGeometry.only(top: 250),
@@ -177,7 +187,10 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                     children: [
                       Text(
                         "${weather.cityName}",
-                        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       Text(
                         "${weather.weatherCondition}",
@@ -190,19 +203,28 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                           Column(
                             children: [
                               const Text('Temperature'),
-                              Text('${weather.temperature} °C', style: TextStyle(fontSize: 18)),
+                              Text(
+                                '${weather.temperature} °C',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               const Text('Humidity'),
-                              Text('${weather.humidity}%', style: TextStyle(fontSize: 18)),
+                              Text(
+                                '${weather.humidity}%',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
                           ),
                           Column(
                             children: [
                               const Text('Wind'),
-                              Text('${weather.windSpeed} m/s', style: TextStyle(fontSize: 18)),
+                              Text(
+                                '${weather.windSpeed} m/s',
+                                style: TextStyle(fontSize: 18),
+                              ),
                             ],
                           ),
                         ],
