@@ -9,7 +9,7 @@ class WeatherNotifier extends AsyncNotifier<Weather?> {
 
   Future<void> fetchWeather(String city) async {
     state = const AsyncLoading();
-    const key = ""; // TODO: move to env
+    const key = String.fromEnvironment('API_KEY');
 
     final url = Uri.https(
       'api.openweathermap.org',
