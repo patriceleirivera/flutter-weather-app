@@ -161,7 +161,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                         child: Transform.rotate(
                           angle: -20 * 3.1415926535 / 180,
                           child: Image.asset(
-                            '/images/${weather.cityName?.toLowerCase()}.jpg',
+                            'assets/images/${weather.cityName?.toLowerCase()}.jpg',
                             height: 450,
                             fit: BoxFit.cover,
                           ),
