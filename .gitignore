@@ -1,0 +1,79 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# IntelliJ / Android Studio
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*.swp
+
+# Build outputs
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android
+android/app/debug
+android/app/profile
+android/app/release
+*.apk
+*.aar
+*.jks
+*.keystore
+
+# Xcode
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+xcuserdata/
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+
+# Coverage
+coverage/
+
+# Symbolication / Crashlytics
+app.*.symbols
+*.symbols
+
+# Firebase config (if private, keep it local)
+google-services.json
+GoogleService-Info.plist
+
+# Environment files
+.env
+.env.*
+
+# Build outputs
+build/
+
+# iOS generated
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
